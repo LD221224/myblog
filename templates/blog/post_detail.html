@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'blog:index' %}">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h3>{{ post.title }}</h3>
+            <h5>{{ post.pub_date }}</h5>
+            <p>{{ post.content }}</p>
+        </section>
+    </div>
+</body>
+</html>
